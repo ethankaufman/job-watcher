@@ -90,3 +90,24 @@ class FakeHttp:
         full = json.loads(self._answer(url))
         offset = payload["offset"]
         return dump({"total": full["total"] if offset == 0 else 0, "jobPostings": full["jobPostings"][offset:offset + 20]})
+
+
+def answers_for_all(good):
+    """Every source answers with something valid (the paged systems get a one-page board)."""
+    answers = {}
+    for s in SOURCES:
+        if s.ats == "workday":
+            answers[f"{s.board}.{s.host}.myworkdayjobs.com"] = workday(("R1", "Analyst", "NYC"))
+        elif s.ats == "oracle":
+            answers[s.host] = oracle(("1", "Analyst", "NYC", "Fam", "2026-11-01"))
+        elif s.ats == "smartrecruiters":
+            answers[f"companies/{s.board}/"] = smartrecruiters(("1", "Analyst", "NYC", "us", "Dept", "2026-11-01T00:00:00Z"))
+        elif s.ats == "greenhouse":
+            answers[f"boards/{s.board}/jobs"] = good
+        elif s.ats == "lever":
+            answers[f"postings/{s.board}"] = json.dumps([{"id": "a", "text": "Analyst", "categories": {}, "createdAt": 0, "hostedUrl": "u"}]).encode()
+        elif s.ats == "ashby":
+            answers[f"job-board/{s.board}"] = json.dumps({"jobs": [{"id": "a", "title": "Analyst", "isListed": True, "jobUrl": "u"}]}).encode()
+    return answers
+
+

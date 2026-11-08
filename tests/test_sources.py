@@ -1,37 +1,10 @@
 import gzip
 import json
 
-import pytest
-
-from tests.helpers import SRC, FakeHttp, greenhouse, oracle, smartrecruiters, workday
-from watcher import sources
+from tests.helpers import SRC, FakeHttp, answers_for_all, greenhouse, oracle, workday, smartrecruiters
 from watcher.sources import SOURCES, fetch_all, fetch_source, raw_path
 
 GOOD = greenhouse((1, "Financial Analyst", "NYC", "2026-11-01T10:00:00Z"), (2, "Software Engineer", "SF", None))
-
-
-@pytest.fixture(autouse=True)
-def no_pause(monkeypatch):
-    monkeypatch.setattr(sources, "PAGE_PAUSE", 0)
-
-
-def answers_for_all(good=GOOD):
-    """Every source answers with something valid (the paged systems get a one-page board)."""
-    answers = {}
-    for s in SOURCES:
-        if s.ats == "workday":
-            answers[f"{s.board}.{s.host}.myworkdayjobs.com"] = workday(("R1", "Analyst", "NYC"))
-        elif s.ats == "oracle":
-            answers[s.host] = oracle(("1", "Analyst", "NYC", "Fam", "2026-11-01"))
-        elif s.ats == "smartrecruiters":
-            answers[f"companies/{s.board}/"] = smartrecruiters(("1", "Analyst", "NYC", "us", "Dept", "2026-11-01T00:00:00Z"))
-        elif s.ats == "greenhouse":
-            answers[f"boards/{s.board}/jobs"] = good
-        elif s.ats == "lever":
-            answers[f"postings/{s.board}"] = json.dumps([{"id": "a", "text": "Analyst", "categories": {}, "createdAt": 0, "hostedUrl": "u"}]).encode()
-        elif s.ats == "ashby":
-            answers[f"job-board/{s.board}"] = json.dumps({"jobs": [{"id": "a", "title": "Analyst", "isListed": True, "jobUrl": "u"}]}).encode()
-    return answers
 
 
 def test_a_good_board_is_saved_compressed_as_it_came(tmp_path):
@@ -71,7 +44,7 @@ def test_smartrecruiters_pages_are_merged(tmp_path):
 
 
 def test_a_failed_source_writes_no_file_and_does_not_stop_the_run(tmp_path):
-    answers = answers_for_all()
+    answers = answers_for_all(GOOD)
     answers["boards/coinbase/jobs"] = OSError("network down")
     results = fetch_all("2026-11-08", tmp_path, FakeHttp(answers))
     by_name = {r["name"]: r for r in results}
