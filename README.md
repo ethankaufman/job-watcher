@@ -216,6 +216,9 @@ history file (this one needs Node.js).
 | `watcher/issues.py` | Opens today's issue, updates it on a second run, closes the previous day's |
 | `watcher/run.py` | The daily run that ties the steps together (`python -m watcher.run`) |
 | `tests/` | The pytest suite |
+| `watcher/__init__.py` | Marks `watcher/` as a Python package (no code) |
+| `README.md` | This file |
+| `.gitignore` | Files git should not track (the local test environment and caches) |
 | `.github/workflows/daily.yml` | The daily run: read the boards, build, issue, commit |
 | `.github/workflows/tests.yml` | Runs the tests on every push |
 | `data/raw/<date>/<source>.json.gz` | The raw answers, compressed, one folder per day |
