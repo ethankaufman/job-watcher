@@ -1,0 +1,199 @@
+{
+  "run_time": "2026-11-08T19:51:06Z",
+  "first_run_date": "2026-11-08",
+  "days_with_success": 1,
+  "open": 10124,
+  "new_today": 0,
+  "removed_today": 0,
+  "sources": [
+    {
+      "name": "stripe",
+      "ok": true,
+      "count": 766,
+      "employer": "Stripe",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "coinbase",
+      "ok": true,
+      "count": 283,
+      "employer": "Coinbase",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "robinhood",
+      "ok": true,
+      "count": 150,
+      "employer": "Robinhood",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "brex",
+      "ok": true,
+      "count": 268,
+      "employer": "Brex",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "affirm",
+      "ok": true,
+      "count": 222,
+      "employer": "Affirm",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "chime",
+      "ok": true,
+      "count": 72,
+      "employer": "Chime",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "sofi",
+      "ok": true,
+      "count": 46,
+      "employer": "SoFi",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "block",
+      "ok": true,
+      "count": 200,
+      "employer": "Block",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "carta",
+      "ok": true,
+      "count": 79,
+      "employer": "Carta",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "betterment",
+      "ok": true,
+      "count": 26,
+      "employer": "Betterment",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "janestreet",
+      "ok": true,
+      "count": 219,
+      "employer": "Jane Street",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "point72",
+      "ok": true,
+      "count": 201,
+      "employer": "Point72",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "imc",
+      "ok": true,
+      "count": 162,
+      "employer": "IMC Trading",
+      "ats": "greenhouse"
+    },
+    {
+      "name": "wealthfront",
+      "ok": true,
+      "count": 23,
+      "employer": "Wealthfront",
+      "ats": "lever"
+    },
+    {
+      "name": "anchorage",
+      "ok": true,
+      "count": 23,
+      "employer": "Anchorage Digital",
+      "ats": "lever"
+    },
+    {
+      "name": "ramp",
+      "ok": true,
+      "count": 169,
+      "employer": "Ramp",
+      "ats": "ashby"
+    },
+    {
+      "name": "plaid",
+      "ok": true,
+      "count": 141,
+      "employer": "Plaid",
+      "ats": "ashby"
+    },
+    {
+      "name": "kalshi",
+      "ok": true,
+      "count": 32,
+      "employer": "Kalshi",
+      "ats": "ashby"
+    },
+    {
+      "name": "polymarket",
+      "ok": true,
+      "count": 36,
+      "employer": "Polymarket",
+      "ats": "ashby"
+    },
+    {
+      "name": "capitalone",
+      "ok": true,
+      "count": 2055,
+      "employer": "Capital One",
+      "ats": "workday"
+    },
+    {
+      "name": "blackrock",
+      "ok": true,
+      "count": 274,
+      "employer": "BlackRock",
+      "ats": "workday"
+    },
+    {
+      "name": "mastercard",
+      "ok": true,
+      "count": 937,
+      "employer": "Mastercard",
+      "ats": "workday"
+    },
+    {
+      "name": "statestreet",
+      "ok": true,
+      "count": 1170,
+      "employer": "State Street",
+      "ats": "workday"
+    },
+    {
+      "name": "fidelity",
+      "ok": true,
+      "count": 853,
+      "employer": "Fidelity Investments",
+      "ats": "workday"
+    },
+    {
+      "name": "paypal",
+      "ok": true,
+      "count": 314,
+      "employer": "PayPal",
+      "ats": "workday"
+    },
+    {
+      "name": "jpmorgan",
+      "ok": true,
+      "count": 1007,
+      "employer": "JPMorgan Chase",
+      "ats": "oracle"
+    },
+    {
+      "name": "experian",
+      "ok": true,
+      "count": 396,
+      "employer": "Experian",
+      "ats": "smartrecruiters"
+    }
+  ]
+}
