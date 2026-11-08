@@ -1,5 +1,5 @@
 from tests.helpers import SRC, ashby, greenhouse, lever, oracle, smartrecruiters, workday
-from watcher.convert import POSTING_COLUMNS, convert, utc_date, workday_id
+from watcher.convert import POSTING_COLUMNS, convert, utc_date, workday_id, workday_location
 
 
 def test_greenhouse():
@@ -44,6 +44,16 @@ def test_workday():
     assert (row["employer"], row["location"]) == ("BlackRock", "New York, NY")
     assert row["department"] == "" and row["posted_date"] == ""  # Workday's list gives neither
     assert row["url"] == "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Professional/job/Somewhere/Director-Retail_R267152"
+
+
+def test_workday_several_offices_become_one_label():
+    assert workday_location("3 Locations") == "Multiple locations"
+    assert workday_location("2 Locations") == "Multiple locations"
+    assert workday_location("1 Location") == "Multiple locations"
+    assert workday_location("New York, NY") == "New York, NY"
+    assert workday_location("Locations Road, Leeds") == "Locations Road, Leeds"  # only the exact "N Locations" pattern
+    row = convert(SRC["blackrock"], workday(("R1", "Analyst", "4 Locations")))[0]
+    assert row["location"] == "Multiple locations"
 
 
 def test_workday_ids():

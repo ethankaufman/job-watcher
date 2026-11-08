@@ -91,13 +91,23 @@ def workday_id(external_path):
     return match.group(1) if match else last
 
 
+MULTIPLE_LOCATIONS = "Multiple locations"
+
+
+def workday_location(text):
+    """Workday's list says "3 Locations" when a posting has several offices (it does not say which).
+    That is kept as one label, "Multiple locations"."""
+    text = clean(text)
+    return MULTIPLE_LOCATIONS if re.fullmatch(r"\d+ Locations?", text) else text
+
+
 def convert_workday(source, raw):
     """Workday: {"total", "jobPostings": [{title, externalPath, locationsText}]} (all pages merged)"""
     rows = []
     for job in load(raw)["jobPostings"]:
         path = job["externalPath"]
         url = f"https://{source.board}.{source.host}.myworkdayjobs.com/en-US/{source.site}{path}"
-        rows.append(posting(source, workday_id(path), job.get("title"), job.get("locationsText"), "", "", url))
+        rows.append(posting(source, workday_id(path), job.get("title"), workday_location(job.get("locationsText")), "", "", url))
     return rows
 
 
