@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guide · Finance Job Watcher</title>
+  <meta name="description" content="How the Finance Job Watcher works: what counts as a new or removed posting, what 'in my role' means, and what every number on the site shows.">
+  <meta name="theme-color" content="#0f3d44">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="guide">
+  <main id="main" class="prose">
+    <div class="page-head">
+      <h1>Guide</h1>
+      <p>What this site does, and what every number and word on it means.</p>
+    </div>
+
+    <section class="card">
+      <h2>Contents</h2>
+      <ol class="toc">
+        <li><a href="#what">What this site is</a></li>
+        <li><a href="#role">What "in my role" means</a></li>
+        <li><a href="#words">Words used on the site</a></li>
+        <li><a href="#pages">Page by page</a></li>
+        <li><a href="#market">The six sections on Market</a></li>
+        <li><a href="#data">Where the data comes from</a></li>
+        <li><a href="#limits">Good to know</a></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="what">
+      <h2 id="what">What this site is</h2>
+      <p>Every day, a program reads the public job boards of 27 finance and fintech employers (banks, asset managers, payments companies, trading firms and fintech start-ups). It compares what is open today with what it saw the day before, and records every posting: when it first appeared, when it was last listed, and when it disappeared.</p>
+      <p>The site turns that record into three pages: <strong>Today</strong> (what changed in the latest run), <strong>Browse</strong> (every open posting, with search and filters) and <strong>Market</strong> (what the history shows about hiring). It is a student project, not an official job board, and it is not connected to any of the employers.</p>
+    </section>
+
+    <section class="card" aria-labelledby="role">
+      <h2 id="role">What "in my role" means</h2>
+      <p>The tool keeps <em>every</em> posting a job board returns, not only the ones that interest me. Each posting is then marked as <strong>in my role</strong> (★) or not, using a rule about its title. My role is an <strong>analyst job in finance or data</strong>.</p>
+      <p>A title is in my role when it:</p>
+      <ul>
+        <li>contains the word <strong>analyst</strong> together with a finance or data word (financial, data, business, credit, risk, investment, quantitative, strategy, pricing, treasury, planning, portfolio, research, market, reporting, analytics, fraud, underwriting, accounting, and a few more), <em>or</em> contains <strong>FP&amp;A</strong> or <strong>business intelligence</strong>; and</li>
+        <li>does not contain a word that makes it a different kind of job: cyber, security, threat, help desk, systems analyst, IT analyst, network, devops, infrastructure.</li>
+      </ul>
+      <div class="example"><strong>In my role:</strong> "Financial Analyst", "Senior Data Analyst, Payments", "Credit Risk Analyst", "Summer Analyst, Investment Banking", "FP&amp;A Manager", "Business Intelligence Developer".<br><strong>Not in my role:</strong> "Software Engineer", "Account Executive", "Security Analyst", "Systems Analyst, Finance", "Analyst, Facilities".</div>
+      <p>It is a simple rule, so it will miss some good postings and let a few odd ones through. Switch to "All postings" on the Browse page to see everything.</p>
+    </section>
+
+    <section class="card" aria-labelledby="words">
+      <h2 id="words">Words used on the site</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Word</th><th scope="col">What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Posting</td><td>One job advert on an employer's board.</td></tr>
+          <tr><td>Open</td><td>The employer's board listed it in the latest run.</td></tr>
+          <tr><td>First seen</td><td>The first day the tool saw the posting.</td></tr>
+          <tr><td>Last seen</td><td>The latest day the board listed it.</td></tr>
+          <tr><td>Removed</td><td>It was listed before, but the board no longer lists it. It may have been filled, closed, or taken down. The removed date is the first day it was missing. If the posting comes back, it is open again and the removed date is cleared.</td></tr>
+          <tr><td>New today</td><td>Postings first seen in the latest run. <strong>It does not include postings that were already open when the tool started watching an employer</strong>: their real start date is unknown, so they would make the first day look like thousands of new jobs.</td></tr>
+          <tr><td>First-run posting</td><td>A posting that was already open the first time the tool read that employer's board. They are marked with a * on Browse and are left out of the "new" and "days open" numbers.</td></tr>
+          <tr><td>Days open</td><td>On Browse: the days from first seen to the latest run. On Market: for postings that were removed, the removed date minus the first-seen date.</td></tr>
+          <tr><td>Source</td><td>One employer's job board. A source can fail on a given day (the board was down or refused the request). A failed source is left alone: nothing is marked removed because of it.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section class="card" aria-labelledby="pages">
+      <h2 id="pages">Page by page</h2>
+      <h3>Today</h3>
+      <ul>
+        <li><strong>Last run:</strong> when the daily update last ran (in UTC and your own time).</li>
+        <li><strong>The four counts:</strong> days with a successful run, open postings, new today, removed today.</li>
+        <li><strong>Sources:</strong> every employer, the job board system it uses, whether it was read successfully, and how many postings it listed.</li>
+        <li><strong>New and removed postings:</strong> the lists for the latest run, each with a link. Tick "Only postings in my role" to narrow them down. Links to removed postings may no longer work.</li>
+      </ul>
+      <h3>Browse</h3>
+      <ul>
+        <li><strong>In my role / All postings:</strong> the switch at the top. It starts on "In my role".</li>
+        <li><strong>Filters:</strong> employer, location (any part of the text, such as "new york"), and days open (at least / at most). <strong>Search titles</strong> matches words in the title.</li>
+        <li><strong>Sort:</strong> click a column heading. Click again to reverse it. It starts with the newest postings first.</li>
+        <li><strong>Apply:</strong> every posting has a link to the employer's own page. The title is a link too.</li>
+        <li><strong>Stars:</strong> the ☆ button saves a posting to your shortlist, stored in this browser on this device (there are no accounts). Tick "Shortlist only" to see your starred postings, including any that have since closed.</li>
+      </ul>
+      <h3>Market</h3>
+      <p>Six short reports about the history, described next. The numbers update as the history grows, and every chart has a "Show the numbers" table underneath.</p>
+      <h3>Install and offline</h3>
+      <p>The site can be installed like an app (use "Install app" at the top, or your browser's install option). If you are offline, it still opens and shows the last data it loaded.</p>
+    </section>
+
+    <section class="card" aria-labelledby="market">
+      <h2 id="market">The six sections on Market</h2>
+      <ol>
+        <li><strong>New postings per day.</strong> Postings first seen each day, for all postings and for my role. It leaves out first-run postings. It starts at zero on the first day and fills in from the second.</li>
+        <li><strong>Removed postings per day.</strong> Postings whose removed date is that day.</li>
+        <li><strong>Open postings per employer.</strong> How many postings each employer has open as of the latest run, and how many of those are in my role.</li>
+        <li><strong>Days open.</strong> For postings that were removed (and are not first-run), the removed date minus the first-seen date. The <strong>median</strong> is the middle value: half closed faster, half slower. It only counts postings that have already closed, so long-lasting ones are missing from it until they close.</li>
+        <li><strong>Share removed within seven days.</strong> Among postings that are not first-run and were first seen at least seven days before the latest run, the share removed within seven days of being first seen. It needs more than a week of history.</li>
+        <li><strong>Top locations.</strong> The most common locations among open postings, exactly as each employer writes them ("New York, NY" and "New York, NY, United States" are separate entries). "Multiple locations" means the posting lists several offices.</li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="data">
+      <h2 id="data">Where the data comes from</h2>
+      <p>Each employer hosts its jobs on an <em>applicant tracking system</em>, and each of those has a public job board that returns the postings as data. The tool reads six of them:</p>
+      <ul>
+        <li><strong>Greenhouse:</strong> Stripe, Coinbase, Robinhood, Brex, Affirm, Chime, SoFi, Block, Carta, Betterment, Jane Street, Point72, IMC Trading</li>
+        <li><strong>Lever:</strong> Wealthfront, Anchorage Digital</li>
+        <li><strong>Ashby:</strong> Ramp, Plaid, Kalshi, Polymarket</li>
+        <li><strong>Workday:</strong> Capital One, BlackRock, Mastercard, State Street, Fidelity Investments, PayPal</li>
+        <li><strong>Oracle Recruiting:</strong> JPMorgan Chase</li>
+        <li><strong>SmartRecruiters:</strong> Experian</li>
+      </ul>
+      <p>Once a day an automated job on GitHub reads every board, saves the raw answers, rebuilds the history, writes a daily report on GitHub, and updates this site. The files the site reads are <a href="data/history.csv">data/history.csv</a> and <a href="data/status.json">data/status.json</a>. The code, and a description of every column, are in the <a href="https://github.com/ethankaufman/job-watcher">project's repository</a>.</p>
+    </section>
+
+    <section class="card" aria-labelledby="limits">
+      <h2 id="limits">Good to know</h2>
+      <h3>JPMorgan Chase is only part of the board</h3>
+      <p>JPMorgan's board holds more than 7,000 postings, which is too many to read every day. The tool asks it only for postings matching the search word <strong>"analyst"</strong>, so JPMorgan's numbers cover analyst-type jobs, not all of its jobs.</p>
+      <h3>Some details are not available everywhere</h3>
+      <p>Greenhouse boards do not list a department, and Workday boards list neither a department nor a posted date, and only say "3 Locations" for postings with several offices. Those fields are left empty or shown as "Multiple locations".</p>
+      <h3>"Removed" means "no longer listed"</h3>
+      <p>A posting can disappear because it was filled, cancelled, or replaced by a new posting with a different ID (which then shows up as new). The tool cannot tell which.</p>
+      <h3>One run a day</h3>
+      <p>The tool looks once a day, so "days open" is measured in whole days. A posting that opens and closes between two runs is never seen.</p>
+    </section>
+  </main>
+  <script type="module">
+    import { startPage } from "./assets/ui.mjs";
+    startPage();
+  </script>
+</body>
+</html>
