@@ -1,0 +1,25 @@
+name: Health check
+
+on:
+  schedule:
+    - cron: "10 12 * * *" # every day at 12:10 UTC, after the daily run
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write # open or close the health-check issue
+  actions: read # read the latest daily runs
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Check the pipeline
+        run: python -m watcher.health
+        env:
+          GH_TOKEN: ${{ github.token }}

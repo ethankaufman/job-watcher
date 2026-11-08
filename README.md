@@ -191,6 +191,16 @@ python3 -m http.server 8000
 then open http://localhost:8000. (Opening the files directly does not work: browsers only allow the data
 files to be loaded through a web server.)
 
+## Health check
+
+A second workflow (`.github/workflows/health.yml`) runs `python -m watcher.health` every day at 12:10 UTC,
+after the daily run. It reads `data/status.json` and the latest daily workflow runs and checks that the
+last run is less than 30 hours old, that the latest daily workflow run succeeded, that no source failed, and
+that there is still time to reach 7 days with data before the due date. If anything is wrong it opens a
+GitHub Issue labelled `health-check` that says what, and the check fails (so GitHub sends a
+notification). When everything is fine again the issue is closed. The daily issues (one per date, labelled
+`daily-report`) are separate and are not touched by this check.
+
 ## Tests
 
 ```
@@ -214,6 +224,7 @@ history file (this one needs Node.js).
 | `watcher/status.py` | Builds `data/status.json` |
 | `watcher/report.py` | Writes the text of the daily issue |
 | `watcher/issues.py` | Opens today's issue, updates it on a second run, closes the previous day's |
+| `watcher/health.py` | The daily health check: is the pipeline running and are the sources working (`python -m watcher.health`) |
 | `watcher/run.py` | The daily run that ties the steps together (`python -m watcher.run`) |
 | `tests/` | The pytest suite |
 | `watcher/__init__.py` | Marks `watcher/` as a Python package (no code) |
@@ -221,6 +232,7 @@ history file (this one needs Node.js).
 | `.gitignore` | Files git should not track (the local test environment and caches) |
 | `.github/workflows/daily.yml` | The daily run: read the boards, build, issue, commit |
 | `.github/workflows/tests.yml` | Runs the tests on every push |
+| `.github/workflows/health.yml` | The daily health check, which opens an issue when something is wrong |
 | `data/raw/<date>/<source>.json.gz` | The raw answers, compressed, one folder per day |
 | `data/history.csv` | The history, one row per posting |
 | `data/status.json` | Describes the latest run |
