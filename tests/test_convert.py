@@ -1,3 +1,5 @@
+import json
+
 from tests.helpers import SRC, ashby, greenhouse, lever, oracle, smartrecruiters, workday
 from watcher.convert import POSTING_COLUMNS, convert, utc_date, workday_id, workday_location
 
@@ -44,6 +46,15 @@ def test_workday():
     assert (row["employer"], row["location"]) == ("BlackRock", "New York, NY")
     assert row["department"] == "" and row["posted_date"] == ""  # Workday's list gives neither
     assert row["url"] == "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Professional/job/Somewhere/Director-Retail_R267152"
+
+
+def test_workday_skips_stub_postings_with_no_link():
+    # seen live on Mastercard and Fidelity: {"bulletFields": ["R-290930"]} and nothing else
+    raw = workday(("R1", "Analyst", "NYC"))
+    data = json.loads(raw)
+    data["jobPostings"].insert(0, {"bulletFields": ["R-290930"]})
+    rows = convert(SRC["blackrock"], json.dumps(data).encode())
+    assert [r["posting_id"] for r in rows] == ["blackrock:R1"]
 
 
 def test_workday_several_offices_become_one_label():

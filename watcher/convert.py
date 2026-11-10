@@ -105,7 +105,9 @@ def convert_workday(source, raw):
     """Workday: {"total", "jobPostings": [{title, externalPath, locationsText}]} (all pages merged)"""
     rows = []
     for job in load(raw)["jobPostings"]:
-        path = job["externalPath"]
+        path = job.get("externalPath")
+        if not path:  # Workday sometimes lists a stub ({"bulletFields": [...]} only): no title, no link, so nothing to show
+            continue
         url = f"https://{source.board}.{source.host}.myworkdayjobs.com/en-US/{source.site}{path}"
         rows.append(posting(source, workday_id(path), job.get("title"), workday_location(job.get("locationsText")), "", "", url))
     return rows
