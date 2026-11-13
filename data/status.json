@@ -1,71 +1,71 @@
 {
-  "run_time": "2026-11-12T16:04:35Z",
+  "run_time": "2026-11-13T15:32:19Z",
   "first_run_date": "2026-11-08",
-  "days_with_success": 5,
-  "open": 10203,
-  "new_today": 222,
-  "removed_today": 217,
+  "days_with_success": 6,
+  "open": 10146,
+  "new_today": 203,
+  "removed_today": 272,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 785,
+      "count": 786,
       "employer": "Stripe",
       "ats": "greenhouse"
     },
     {
       "name": "coinbase",
       "ok": true,
-      "count": 271,
+      "count": 269,
       "employer": "Coinbase",
       "ats": "greenhouse"
     },
     {
       "name": "robinhood",
       "ok": true,
-      "count": 154,
+      "count": 160,
       "employer": "Robinhood",
       "ats": "greenhouse"
     },
     {
       "name": "brex",
       "ok": true,
-      "count": 284,
+      "count": 283,
       "employer": "Brex",
       "ats": "greenhouse"
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 213,
+      "count": 221,
       "employer": "Affirm",
       "ats": "greenhouse"
     },
     {
       "name": "chime",
       "ok": true,
-      "count": 66,
+      "count": 68,
       "employer": "Chime",
       "ats": "greenhouse"
     },
     {
       "name": "sofi",
       "ok": true,
-      "count": 46,
+      "count": 48,
       "employer": "SoFi",
       "ats": "greenhouse"
     },
     {
       "name": "block",
       "ok": true,
-      "count": 192,
+      "count": 191,
       "employer": "Block",
       "ats": "greenhouse"
     },
     {
       "name": "carta",
       "ok": true,
-      "count": 78,
+      "count": 77,
       "employer": "Carta",
       "ats": "greenhouse"
     },
@@ -79,21 +79,21 @@
     {
       "name": "janestreet",
       "ok": true,
-      "count": 218,
+      "count": 217,
       "employer": "Jane Street",
       "ats": "greenhouse"
     },
     {
       "name": "point72",
       "ok": true,
-      "count": 198,
+      "count": 200,
       "employer": "Point72",
       "ats": "greenhouse"
     },
     {
       "name": "imc",
       "ok": true,
-      "count": 157,
+      "count": 156,
       "employer": "IMC Trading",
       "ats": "greenhouse"
     },
@@ -107,28 +107,28 @@
     {
       "name": "anchorage",
       "ok": true,
-      "count": 23,
+      "count": 22,
       "employer": "Anchorage Digital",
       "ats": "lever"
     },
     {
       "name": "ramp",
       "ok": true,
-      "count": 177,
+      "count": 180,
       "employer": "Ramp",
       "ats": "ashby"
     },
     {
       "name": "plaid",
       "ok": true,
-      "count": 143,
+      "count": 142,
       "employer": "Plaid",
       "ats": "ashby"
     },
     {
       "name": "kalshi",
       "ok": true,
-      "count": 38,
+      "count": 42,
       "employer": "Kalshi",
       "ats": "ashby"
     },
@@ -142,35 +142,35 @@
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2070,
+      "count": 2057,
       "employer": "Capital One",
       "ats": "workday"
     },
     {
       "name": "blackrock",
       "ok": true,
-      "count": 292,
+      "count": 281,
       "employer": "BlackRock",
       "ats": "workday"
     },
     {
       "name": "mastercard",
       "ok": true,
-      "count": 895,
+      "count": 861,
       "employer": "Mastercard",
       "ats": "workday"
     },
     {
       "name": "statestreet",
       "ok": true,
-      "count": 1203,
+      "count": 1194,
       "employer": "State Street",
       "ats": "workday"
     },
     {
       "name": "fidelity",
       "ok": true,
-      "count": 881,
+      "count": 893,
       "employer": "Fidelity Investments",
       "ats": "workday"
     },
@@ -184,14 +184,14 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 1019,
+      "count": 1001,
       "employer": "JPMorgan Chase",
       "ats": "oracle"
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 392,
+      "count": 389,
       "employer": "Experian",
       "ats": "smartrecruiters"
     }
