@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-11-13T15:32:19Z",
+  "run_time": "2026-11-14T14:21:42Z",
   "first_run_date": "2026-11-08",
-  "days_with_success": 6,
-  "open": 10146,
-  "new_today": 203,
-  "removed_today": 272,
+  "days_with_success": 7,
+  "open": 10148,
+  "new_today": 84,
+  "removed_today": 85,
   "sources": [
     {
       "name": "stripe",
@@ -16,35 +16,35 @@
     {
       "name": "coinbase",
       "ok": true,
-      "count": 269,
+      "count": 265,
       "employer": "Coinbase",
       "ats": "greenhouse"
     },
     {
       "name": "robinhood",
       "ok": true,
-      "count": 160,
+      "count": 165,
       "employer": "Robinhood",
       "ats": "greenhouse"
     },
     {
       "name": "brex",
       "ok": true,
-      "count": 283,
+      "count": 286,
       "employer": "Brex",
       "ats": "greenhouse"
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 221,
+      "count": 217,
       "employer": "Affirm",
       "ats": "greenhouse"
     },
     {
       "name": "chime",
       "ok": true,
-      "count": 68,
+      "count": 71,
       "employer": "Chime",
       "ats": "greenhouse"
     },
@@ -65,7 +65,7 @@
     {
       "name": "carta",
       "ok": true,
-      "count": 77,
+      "count": 78,
       "employer": "Carta",
       "ats": "greenhouse"
     },
@@ -135,63 +135,68 @@
     {
       "name": "polymarket",
       "ok": true,
-      "count": 33,
+      "count": 34,
       "employer": "Polymarket",
       "ats": "ashby"
     },
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2057,
+      "count": 2059,
       "employer": "Capital One",
       "ats": "workday"
     },
     {
       "name": "blackrock",
-      "ok": true,
-      "count": 281,
+      "ok": false,
+      "count": 0,
       "employer": "BlackRock",
-      "ats": "workday"
+      "ats": "workday",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "name": "mastercard",
-      "ok": true,
-      "count": 861,
+      "ok": false,
+      "count": 0,
       "employer": "Mastercard",
-      "ats": "workday"
+      "ats": "workday",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "name": "statestreet",
-      "ok": true,
-      "count": 1194,
+      "ok": false,
+      "count": 0,
       "employer": "State Street",
-      "ats": "workday"
+      "ats": "workday",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "name": "fidelity",
-      "ok": true,
-      "count": 893,
+      "ok": false,
+      "count": 0,
       "employer": "Fidelity Investments",
-      "ats": "workday"
+      "ats": "workday",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "name": "paypal",
-      "ok": true,
-      "count": 326,
+      "ok": false,
+      "count": 0,
       "employer": "PayPal",
-      "ats": "workday"
+      "ats": "workday",
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 1001,
+      "count": 995,
       "employer": "JPMorgan Chase",
       "ats": "oracle"
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 389,
+      "count": 390,
       "employer": "Experian",
       "ats": "smartrecruiters"
     }
