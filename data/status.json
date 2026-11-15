@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-14T14:21:42Z",
+  "run_time": "2026-11-15T14:52:46Z",
   "first_run_date": "2026-11-08",
-  "days_with_success": 7,
-  "open": 10148,
-  "new_today": 84,
-  "removed_today": 85,
+  "days_with_success": 8,
+  "open": 10105,
+  "new_today": 61,
+  "removed_today": 119,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 786,
+      "count": 785,
       "employer": "Stripe",
       "ats": "greenhouse"
     },
@@ -142,61 +142,56 @@
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2059,
+      "count": 2061,
       "employer": "Capital One",
       "ats": "workday"
     },
     {
       "name": "blackrock",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 273,
       "employer": "BlackRock",
-      "ats": "workday",
-      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ats": "workday"
     },
     {
       "name": "mastercard",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 845,
       "employer": "Mastercard",
-      "ats": "workday",
-      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ats": "workday"
     },
     {
       "name": "statestreet",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 1169,
       "employer": "State Street",
-      "ats": "workday",
-      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ats": "workday"
     },
     {
       "name": "fidelity",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 892,
       "employer": "Fidelity Investments",
-      "ats": "workday",
-      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ats": "workday"
     },
     {
       "name": "paypal",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 335,
       "employer": "PayPal",
-      "ats": "workday",
-      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "ats": "workday"
     },
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 995,
+      "count": 993,
       "employer": "JPMorgan Chase",
       "ats": "oracle"
     },
     {
       "name": "experian",
       "ok": true,
-      "count": 390,
+      "count": 389,
       "employer": "Experian",
       "ats": "smartrecruiters"
     }
