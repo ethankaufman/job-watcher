@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-21T15:28:17Z",
+  "run_time": "2026-11-22T15:29:01Z",
   "first_run_date": "2026-11-08",
-  "days_with_success": 14,
-  "open": 9958,
-  "new_today": 116,
-  "removed_today": 138,
+  "days_with_success": 15,
+  "open": 9932,
+  "new_today": 1,
+  "removed_today": 27,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 778,
+      "count": 777,
       "employer": "Stripe",
       "ats": "greenhouse"
     },
@@ -142,7 +142,7 @@
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2052,
+      "count": 2050,
       "employer": "Capital One",
       "ats": "workday"
     },
@@ -156,21 +156,21 @@
     {
       "name": "mastercard",
       "ok": true,
-      "count": 719,
+      "count": 715,
       "employer": "Mastercard",
       "ats": "workday"
     },
     {
       "name": "statestreet",
       "ok": true,
-      "count": 1173,
+      "count": 1164,
       "employer": "State Street",
       "ats": "workday"
     },
     {
       "name": "fidelity",
       "ok": true,
-      "count": 880,
+      "count": 876,
       "employer": "Fidelity Investments",
       "ats": "workday"
     },
@@ -184,7 +184,7 @@
     {
       "name": "jpmorgan",
       "ok": true,
-      "count": 974,
+      "count": 968,
       "employer": "JPMorgan Chase",
       "ats": "oracle"
     },
