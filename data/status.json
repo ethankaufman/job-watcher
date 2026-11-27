@@ -1,15 +1,15 @@
 {
-  "run_time": "2026-11-26T17:48:30Z",
+  "run_time": "2026-11-27T17:33:31Z",
   "first_run_date": "2026-11-08",
-  "days_with_success": 19,
-  "open": 9927,
-  "new_today": 123,
-  "removed_today": 160,
+  "days_with_success": 20,
+  "open": 9848,
+  "new_today": 70,
+  "removed_today": 171,
   "sources": [
     {
       "name": "stripe",
       "ok": true,
-      "count": 769,
+      "count": 766,
       "employer": "Stripe",
       "ats": "greenhouse"
     },
@@ -23,28 +23,28 @@
     {
       "name": "robinhood",
       "ok": true,
-      "count": 162,
+      "count": 161,
       "employer": "Robinhood",
       "ats": "greenhouse"
     },
     {
       "name": "brex",
       "ok": true,
-      "count": 270,
+      "count": 266,
       "employer": "Brex",
       "ats": "greenhouse"
     },
     {
       "name": "affirm",
       "ok": true,
-      "count": 216,
+      "count": 218,
       "employer": "Affirm",
       "ats": "greenhouse"
     },
     {
       "name": "chime",
       "ok": true,
-      "count": 77,
+      "count": 76,
       "employer": "Chime",
       "ats": "greenhouse"
     },
@@ -65,14 +65,14 @@
     {
       "name": "carta",
       "ok": true,
-      "count": 81,
+      "count": 82,
       "employer": "Carta",
       "ats": "greenhouse"
     },
     {
       "name": "betterment",
       "ok": true,
-      "count": 23,
+      "count": 22,
       "employer": "Betterment",
       "ats": "greenhouse"
     },
@@ -93,7 +93,7 @@
     {
       "name": "imc",
       "ok": true,
-      "count": 149,
+      "count": 151,
       "employer": "IMC Trading",
       "ats": "greenhouse"
     },
@@ -142,42 +142,42 @@
     {
       "name": "capitalone",
       "ok": true,
-      "count": 2054,
+      "count": 2056,
       "employer": "Capital One",
       "ats": "workday"
     },
     {
       "name": "blackrock",
       "ok": true,
-      "count": 295,
+      "count": 287,
       "employer": "BlackRock",
       "ats": "workday"
     },
     {
       "name": "mastercard",
       "ok": true,
-      "count": 701,
+      "count": 660,
       "employer": "Mastercard",
       "ats": "workday"
     },
     {
       "name": "statestreet",
       "ok": true,
-      "count": 1163,
+      "count": 1148,
       "employer": "State Street",
       "ats": "workday"
     },
     {
       "name": "fidelity",
       "ok": true,
-      "count": 859,
+      "count": 852,
       "employer": "Fidelity Investments",
       "ats": "workday"
     },
     {
       "name": "paypal",
       "ok": true,
-      "count": 378,
+      "count": 379,
       "employer": "PayPal",
       "ats": "workday"
     },
@@ -191,7 +191,7 @@
     {
       "name": "experian",
       "ok": true,
-      "count": 419,
+      "count": 413,
       "employer": "Experian",
       "ats": "smartrecruiters"
     }
